@@ -12,17 +12,36 @@ function draw_clock(obj) {
   //        = 0 if the alarm is currently going off
   //        > 0 --> the number of seconds until alarm should go off
   background(50); //  beige
+
+let millis = obj.millis;
+let seconds = obj.seconds;
+let minutes = obj.minutes;
+let hours = obj.hours;
+
+drawDynamiteStick(100, 100);
+
+let sMap = map(minutes,0,59,100,400);
+
   fill(200); // dark grey
   textSize(40);
   textAlign(CENTER, CENTER);
-  text("YOUR MAIN CLOCK CODE GOES HERE", width / 2, 200);
+  text(obj.seconds, width / 2, 200);
 
+  let sMap = map(minutes,0,59,100,59);
 
-  fill(249, 140, 255);// pink
+  fill(250, 0, 0);// red
   ellipse(width / 3, 350, 150);
-  fill(140, 255, 251) // blue
+  fill(139, 0, 0) // maroon
   ellipse(width / 2, 350, 150);
-  fill(175, 133, 255); // purple
-  ellipse(width / 3 * 2, 350, 150);
+
+let sMap = map(seconds,0,59,100,400);
+
+  fill(128, 0, 32); // purple
+  ellipse(width / 3 * 2, sMap, 150);
+
+
+}
+
+fuction drawDynamiteStick(x, y) {
 
 }
